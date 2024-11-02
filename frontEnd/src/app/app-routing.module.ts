@@ -6,7 +6,16 @@ import { LoginComponent } from './components/login/login.component';
 import { OrdenVisualComponent } from './components/orden-visual/orden-visual.component';
 import { HistorialComponent } from './components/historial/historial.component';
 
+
+import { AuthGuard } from './auth.guard';
+
+
+
 export const routes: Routes = [
+
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
 
   {
     path: '',

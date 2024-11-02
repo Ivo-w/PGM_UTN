@@ -10,6 +10,7 @@ import {pool} from '../config/database.js';
  import pisoRoutes from './routes/piso.rutas.js';
  import activoRoutes from './routes/activotarea.rutas.js'; //activo solo
  import ubicacionRoutes from './routes/ubicacion.rutas.js';
+ const authRoutes = require('./routes/auth');
  //import sectorRoutes from './routes/piso.rutas.js';
 
 
@@ -31,6 +32,7 @@ app.use('/api',edificioRoutes );
 app.use('/api', pisoRoutes);
 app.use ('/api', activoRoutes);
 app.use ('/api', ubicacionRoutes);
+app.use('/api/auth', authRoutes);
 //app.use('/api', sectorRoutes);
 
 
